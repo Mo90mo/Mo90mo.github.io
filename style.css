@@ -1,46 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100|Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100|Lato:100');
 body {
-	background-image: url('back3.jpg');
+	background-image: url('./images/back6.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	background-opacity: 0.5;
-	font-family: 'Raleway', sans-serif;
-	display: grid;
+	font-family: 'Poiret One', cursive;
+	/*display: grid;
 	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);*/
+	margin: 0;
+	position: relative;
+	z-index: 1;
 }
-
-.banner {
-	grid-row-start: 1;
-	grid-row-end: 2;
-	grid-column-start: 1;
-	grid-column-end: 3;
+html {
 	width: 100%;
+	margin: 0;
 	height: 100%;
+}
+span:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+.description a {
+	color: white;
+}
+.banner {
 	text-align: center;
 	font-size: 30px;
 	color: white;
-	font-family: 'Montserrat', sans-serif;
-	padding-top: 150px;
-
+	font-family: 'Josefin Sans', sans-serif;
+	/*font-family: 'Poiret One', cursive;*/
+	letter-spacing: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 100px;
+	transition: margin-top 2s;
+}
+.maincontent {
+	padding: 5%;
 }
 .openBanner {
-	grid-row-start: 1;
-	grid-row-end: 2;
-	grid-column-start: 1;
-	grid-column-end: 2;
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	color: white;
-	font-family: 'Montserrat', sans-serif;
-	padding-top: 150px;
-	background-image: url('back3.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-
+	font-family: 'Poiret One', cursive;
+	letter-spacing: 5px;
+	margin-top: -100px;
+	transition: margin-top 2s;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 .skills {
 	font-size: 15px;
@@ -49,70 +64,134 @@ body {
 	justify-content: space-around;
 	padding: 0 20%;
 }
-.projects {
+
+.hiddenAbout {
+	margin-top: -2px;
+	/*visibility: hidden;*/
+	overflow: hidden;
+	color: black;
+	display: none;
+}
+	
+
+.openAbout {
+	margin-top: 50px;
+	transition: margin-top 2s;
+	z-index: -1;
+	position: relative;
+  	background: #0a1f21;
+  	color: white;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	background-color: white;
-	margin: 10%;
-	
+	padding: 5%;
+	font-family: 'Josefin Sans', sans-serif;
 
-
-}
-.aboutMe {
-	display: none;
-	color: black;
-	width: 200px;
 }
 .openContacts {
-	/*color: white;*/
-	
-	grid-row-start: 1;
-	grid-row-end: 3;
-	grid-column-start: 2;
-	grid-column-end: 3;
+	margin-top: 50px;
+	transition: margin-top 2s;
+	z-index: -1;
+	position: relative;
+  	background: #0a1f21;
+  	color: white;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+/*.singleContact {
+	width: 30%;
+	margin: 2%;
 	background-color: white;
-	height: 100%;
+	padding: 3%;
+}*/
+.content {
+	padding: 5%;
+
+	
+}
+.hiddenMain {
+	display: none;
+	margin-top: -2px;
+}
+.openMain {
+	margin-top: 50px;
+	transition: margin-top 2s;
+	z-index: -1;
+	position: relative;
+  	/*background: #0a1f21;*/
+  	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	animation: slideIn 2s forwards
+	align-items: center;
+	font-family: 'Josefin Sans', sans-serif;
 
+	/*font-family: 'Raleway', sans-serif;*/
+	/*padding: 5%;	*/
+}
+.allProjects {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.section {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	/*justify-content: space-around;*/
+	margin: 5%;
+  	background: #0a1f21;
+	text-align: center;
+
+}
+.description {
+	width: 70%;
+	padding-bottom: 10%;
+	font-family: 'Josefin Sans', sans-serif;
 
 
 }
+.section img {
+	width: 80%;
+	height: 70%;
+	padding-top: 10%;
+
+}
+
 .nav {
-	grid-row-start: 2;
-	grid-row-end: 3;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	/*height: 150px;*/
-	padding-top: 150px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+	align-items: flex-end;
 	color: white;
-	height: 100%;
+	margin-top: 100px;
+	/*height: 100%;*/
 }
 .openNav {
-	grid-row-start: 2;
-	grid-row-end: 3;
-	grid-column-start: 1;
-	grid-column-end: 2;
-	padding-top: 150px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 	color: white;
+	margin-top: -100;
+	transition: margin-top 2s;
+
+
 }
 .hiddenContacts {
-	display: none;
-	
+	visibility: hidden;
+	margin-top: -2px;
+
 }
+
 footer {
 	/*display: none;*/
 	height: 300px;
