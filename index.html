@@ -8,108 +8,111 @@
 <body>
 	<header>
 	</header>
-	<div>
-	<banner class="banner">
+	<banner class="banner closedBanner">
 		<div class="maincontent">
-		<h1>MONICA MORONI</h1>
-		<h3>Front-End Developer</h3>
-		<div class="skills">
-			<span>HTML</span>
-			<span>CSS</span>
-			<span>JavaScript</span>
-			<span>React</span>
+			<h1>MONICA MORONI</h1>
+			<h3>Front-End Developer</h3>
+			<div class="skills">
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>React</span>
+			</div>
 		</div>
-	</div>
 	</banner>
-	<nav class="nav">
-	<span class="projects">Projects</span>
+	<nav class="nav closedNav">
+		<span class="projects">Projects</span>
 		<span class="about">About</span>
 		<span class="contacts">Contacts</span>
 	</nav>
 	<div class="aboutMe hiddenAbout">
-		
 		<div class="photo">
-		<img src='images/photo.jpg'>
+			<img src='images/photo.jpg'>
 		</div>
 		<div class= "content">
-		<p>I am a Junior Front End Developer seeking for an opportunity </p>
-		<p></p>
-		<p>I enrolled in one online program offered by Udacity to learn Frontend development. As I went through the program, I felt powerful when I saw the first red "Hello World!" appeared on my screen after I wrote a couple of lines in HTML and CSS; slightly scared when I met JavaScript and things got serious and then deeply in love when I started hanging out with React.</p>
-		<p>I learned that when you build something, you always have to keep in your mind the user in terms of design, accessibility and responsiveness of the product.</p>
-		<p>"I have no special talents. I am only passionately curious." 
-		Albert Einstein</p>
-		<p>Curiosity is what drives me in life and leads all my choices. Committment and hard work are what push me through those choices and finally get me to the goals I fix for myself.</p>
+			<p>I am a Junior Front End Developer seeking for an opportunity </p>
+			<p></p>
+			<p>I enrolled in one online program offered by Udacity to learn Frontend development. As I went through the program, I felt powerful when I saw the first red "Hello World!" appeared on my screen after I wrote a couple of lines in HTML and CSS; slightly scared when I met JavaScript and things got serious and then deeply in love when I started hanging out with React.</p>
+			<p>I learned that when you build something, you always have to keep in your mind the user in terms of design, accessibility and responsiveness of the product.</p>
+			<p>"I have no special talents. I am only passionately curious." 
+			Albert Einstein</p>
+			<p>Curiosity is what drives me in life and leads all my choices. Committment and hard work are what push me through those choices and finally get me to the goals I fix for myself.</p>
+		</div>
 	</div>
-	</div>
-
 	<main class="main hiddenMain">
-		<!-- <div class="title">
-			<h2>Projects</h2>
-		</div> -->
 		<div class="allProjects">
-		<div class="section">
-			<div class="image"><img src="images/portfolio.png"></div>
-			<div class="description">
-				<h3>Build your Porfolio</h3>
-				<p>My very first attempt as a web developer. A porfolio page.</p>
-				<p>Core skills: HTML, CSS Grid, CSS Flexbox, Responsiveness.
-				</p>
+			<div class="builtFromScratch">
+				<div class="section">
+					<div class="image"><a href="https://my-library.netlify.com/"><img class="inner-img" src="images/books.png"></a></div>
+					<div class="description">
+						<h3>ONLINE LIBRARY APP</h3>
+						<p>An online personal library that allows you to look for books and add them to your virtual library.</p>
+						<p>Core skills: HTML, CSS, React.js, Accesibility, Responsiveness, Design.</p>
+						<a href="https://my-library.netlify.com/">View Demo</a>
+						<a href="https://github.com/Mo90mo/Books-app">View the GitHub repo</a>
+					</div>
+				</div>
+				<div class="section">
+					<div class="image"><a href="https://myneighborhood.netlify.com/"><img class="inner-img" src="images/neighborhood-map.png"></a></div>
+					<div class="description">
+						<h3>NEIGHBORHOOD APP</h3>
+						<p>A neighborhood map to look for gyms in your area.</p>
+						<p>Core skills: HTML, CSS, React, using APIs, Responsiveness, Accessibility, Design.</p>
+						<a href="https://myneighborhood.netlify.com/">View demo</a>
+						<a href="https://github.com/Mo90mo/Neighborhood-map">View GitHub repo</a>
+					</div>
+				</div>
+			</div>
+			<div class="implemented">
+				<div class="section">
+					<div class="image"><a href="https://github.com/Mo90mo/FeedReader-testing"><img class="inner-img" src="images/feed.png"></a></div>
+					<div class="description">
+						<h3>TESTING FEED READER</h3>
+						<p>I took an already built app and test it using Jasmine</p>
+						<p>Core skills: Jasmine</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="image"><a href="https://github.com/Mo90mo/Restaurants-App"><img class="inner-img"src="images/res.png"></a></div>
+					<div class="description">
+						<h3>RESTAURANT REVIEWS APP</h3>
+						<p>Already built restaurant reviews app. My job here was adding to the app: Responsiveness, Accesibility (ARIA), Offline availability (Service Worker). </p>
+					</div>
+				</div>
+			</div>
+			<div class="beginnings">
+				<div class="section">
+					<div class="image"><img class="inner-img" src="images/portfolio.png"></div>
+					<div class="description">
+						<h3>PORTFOLIO PAGE</h3>
+						<p>My very first attempt as a web developer. A porfolio page.</p>
+						<p>Core skills: HTML, CSS Grid, CSS Flexbox, Responsiveness.
+						</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="image"><a  href="https://matching-card-game.netlify.com/"><img class="inner-img" src="images/memory.png"></a></div>
+					<div class="description">
+						<h3>MEMORY GAME</h3>
+						<p>A classic memory game where the goal is flipping and matching all the cards.</p> 
+						<p>Core skills: HTML, CSS, JavaScript</p>
+						<a href="https://github.com/Mo90mo/Memory-game">View the GitHub repo</a>
+						<a href="https://matching-card-game.netlify.com/">View demo</a>
+					</div>
+				</div>
+				<div class="section">
+					<div class="image"><a href="https://classic-arcade.netlify.com/"><img class="inner-img" src="images/arcade.png"></a></div>
+					<div class="description">
+						<h3>CLASSIC ARCADE GAME</h3>
+						<p>An arcade game. Try to reach the water without hitting the bugs as many time as possible.</p>
+						<p>Core skills: HTML Canvas, CSS Grid, JavaScript.</p>
+						<a href="https://classic-arcade.netlify.com/">View demo</a>
+						<a href="https://github.com/Mo90mo/Classic-Arcade-Game">View GitHub repo</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="section">
-			<div class="image"><img src="images/memory.png"></div>
-			<div class="description">
-			<h3>Memory Game</h3>
-			<p>A classic memory game with my personal design.</p> 
-			<p>Core skills: HTML, CSS, JavaScript</p>
-			</div>
-		</div>
-		<div class="section">
-			<div class="image"><img src="images/arcade.png"></div>
-			<div class="description">
-			<h3>Classic Arcade Game</h3>
-			<p>An arcade game.</p>
-			<p>Core skills: HTML Canvas, CSS Grid, JavaScript.</p>
-		</div>
-		</div>
-		<div class="section">
-			<div class="image"><img src="images/feed.png"></div>
-			<div class="description">
-
-			<h3>Feed Reader</h3>
-			<p>This is an already built feed reader app where I performed some unit testing.</p>
-			<p>Core skills: Jasmine</p>
-		</div>
-		</div>
-		<div class="section">
-			<div class="image"><img src="images/res.png"></div>
-			<div class="description">
-
-			<h3>Restaurants Reviews App</h3>
-			<p>Already built restaurant reviews app. My job here was adding to the app: Responsiveness, Accesibility (ARIA), Offline availability (Service Worker). </p>
-		</div>
-		</div>
-		<div class="section">
-			<div class="image"><a href="https://my-library.netlify.com/"><img src="images/books.png"></a></div>
-			<div class="description">
-
-			<h3>Online Library</h3>
-			<p>An online personal library.</p>
-			<p>Core skills: HTML, CSS, React.js, Accesibility, Resonisveness, Design.</p>
-			<a href="https://my-library.netlify.com/">View Demo</a>
-			<a href="https://github.com/Mo90mo/Books-app">View the GitHub repo</a>
-		</div>
-		</div>
-		<div class="section">
-			<div class="image"><img src="images/neighborhood-map.png"></div>
-			<div class="description">
-
-			<h3>Neighborhood App</h3>
-			<p>A neighborhood map to look for gyms in your area.</p>
-			<p>Core skills: HTML, CSS, Reactm, using APIs, Responsiveness, Accessibility, Design.</p></div>
-		</div>
-	</div>
-</main>
+	</main>
 	
 	
 	<footer class="hiddenContacts">
@@ -117,7 +120,6 @@
 		<div class="singleContact">monica.moroni2@gmail.com</div>
 		<div class="singleContact"><a href="https://www.linkedin.com/in/monica-moroni-7a2582149">My linkedIn</a></div>
 	</footer>
-	<div>
 		<!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@gregshield?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Greg Shield"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Greg Shield</span></a> -->
 </body>
 <script src="app.js"></script>

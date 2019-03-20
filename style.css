@@ -12,22 +12,28 @@ body {
 	margin: 0;
 	position: relative;
 	z-index: 1;
+	height: 100vh;
+
 }
 html {
 	width: 100%;
 	margin: 0;
-	height: 100%;
+	height: 100vh;
 }
-span:hover {
+nav span:hover {
 	cursor: pointer;
 	transform: scale(1.2);
+}
+a {
+	color: white;
+	text-decoration: none;
 }
 .description a {
 	color: white;
 }
-.banner {
+.closedBanner {
 	text-align: center;
-	font-size: 30px;
+	font-size: 2em;
 	color: white;
 	font-family: 'Josefin Sans', sans-serif;
 	/*font-family: 'Poiret One', cursive;*/
@@ -36,29 +42,36 @@ span:hover {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	margin-top: 100px;
+	margin-top: 5%;
 	transition: margin-top 2s;
 }
 .maincontent {
 	padding: 5%;
 }
 .openBanner {
-	width: 100%;
-	height: 100%;
 	text-align: center;
-	font-size: 25px;
+	font-size: 1.7em;
 	color: white;
-	font-family: 'Poiret One', cursive;
+	/*font-family: 'Poiret One', cursive;*/
 	letter-spacing: 5px;
-	margin-top: -100px;
+	margin-top: -5%;
 	transition: margin-top 2s;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
+.openBanner h1 {
+	margin-bottom: 0;
+}
+.openBanner h3 {
+	margin: 5px;
+}
+.openBanner .skills {
+	font-size: 0.5em;
+}
 .skills {
-	font-size: 15px;
+	font-size: 0.6em;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -67,12 +80,9 @@ span:hover {
 
 .hiddenAbout {
 	margin-top: -2px;
-	/*visibility: hidden;*/
 	overflow: hidden;
-	color: black;
 	display: none;
 }
-	
 
 .openAbout {
 	margin-top: 50px;
@@ -90,9 +100,8 @@ span:hover {
 
 }
 .openContacts {
-	margin-top: 50px;
+	margin-top: 100px;
 	transition: margin-top 2s;
-	z-index: -1;
 	position: relative;
   	background: #0a1f21;
   	color: white;
@@ -100,79 +109,78 @@ span:hover {
   	flex-direction: row;
   	justify-content: space-around;
 	font-family: 'Josefin Sans', sans-serif;
-
 }
-/*.singleContact {
-	width: 30%;
-	margin: 2%;
-	background-color: white;
-	padding: 3%;
-}*/
+
 .content {
 	padding: 5%;
-
-	
 }
+
 .hiddenMain {
 	display: none;
 	margin-top: -2px;
 }
 .openMain {
 	margin-top: 50px;
-	transition: margin-top 2s;
-	z-index: -1;
+	transition: 2s;
 	position: relative;
-  	/*background: #0a1f21;*/
   	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	font-family: 'Josefin Sans', sans-serif;
-
-	/*font-family: 'Raleway', sans-serif;*/
-	/*padding: 5%;	*/
 }
 .allProjects {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+}
+.builtFromScratch {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+.implemented {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+.beginnings {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 .section {
-	width: 40%;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	/*justify-content: space-around;*/
 	margin: 5%;
   	background: #0a1f21;
 	text-align: center;
-
 }
 .description {
 	width: 70%;
 	padding-bottom: 10%;
 	font-family: 'Josefin Sans', sans-serif;
-
-
 }
 .section img {
 	width: 80%;
 	height: 70%;
 	padding-top: 10%;
-
 }
 
-.nav {
+.closedNav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: flex-end;
 	color: white;
-	margin-top: 100px;
-	/*height: 100%;*/
+	margin-top: 10%;
 }
 .openNav {
 
@@ -187,9 +195,8 @@ span:hover {
 
 }
 .hiddenContacts {
-	visibility: hidden;
 	margin-top: -2px;
-
+	display: none;
 }
 
 footer {
@@ -203,8 +210,50 @@ footer {
 .image {
 	width: 400px;
 	height: 300px;
+	overflow: hidden;
 
+}
+.inner-img {
+	transition: 0.3s;
+}
+.inner-img:hover {
+	transform: scale(1.1);
+	cursor: pointer;
 }
 main {
 	display: none;
+}
+
+@media screen and (max-width: 550px) {
+	.banner {
+		font-size: 1.2em;
+	}
+	.openBanner {
+		font-size: 1.2em;
+		transition: margin-top 2s;
+		margin-top: 30px;
+
+	}
+	.openMain {
+		transition: margin-top 2s;
+		margin-top: 30px;
+	}
+	.allProjects {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.9em;
+	}
+	.section {
+		width: 70%;
+	}
+	.image {
+		width: 200px;
+		height: 150px;
+	}
+	.openAbout {
+		display: flex;
+		flex-direction: column;
+	}
 }
