@@ -5,7 +5,9 @@ body {
 	background-image: url('./images/back6.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	font-family: 'Poiret One', cursive;
+	/*font-family: 'Poiret One', cursive;*/
+	font-family: 'Josefin Sans', sans-serif;
+
 	/*display: grid;
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(2, 1fr);*/
@@ -28,6 +30,14 @@ a {
 	color: white;
 	text-decoration: none;
 }
+h1 {
+	letter-spacing: 20px;
+	font-weight: normal;
+}
+h3 {
+	font-weight: normal;
+	letter-spacing: 5px;
+}
 .description a {
 	color: white;
 }
@@ -35,15 +45,17 @@ a {
 	text-align: center;
 	font-size: 2em;
 	color: white;
+	/*font-family: 'Lato', sans-serif;*/
 	font-family: 'Josefin Sans', sans-serif;
 	/*font-family: 'Poiret One', cursive;*/
-	letter-spacing: 5px;
+	/*letter-spacing: 5px;*/
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	margin-top: 5%;
-	transition: margin-top 2s;
+	transition: margin-top 1s;
+	font-weight: normal;
 }
 .maincontent {
 	padding: 5%;
@@ -52,15 +64,18 @@ a {
 	text-align: center;
 	font-size: 1.7em;
 	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+	overflow: scroll;
 	/*font-family: 'Poiret One', cursive;*/
-	letter-spacing: 5px;
+	/*letter-spacing: 5px;*/
 	margin-top: -5%;
-	transition: margin-top 2s;
+	transition: margin-top 1s;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
+
 .openBanner h1 {
 	margin-bottom: 0;
 }
@@ -76,8 +91,11 @@ a {
 	flex-direction: row;
 	justify-content: space-around;
 	padding: 0 20%;
+	letter-spacing: 5px;
 }
-
+.smallTitle {
+	display: none;
+}
 .hiddenAbout {
 	margin-top: -2px;
 	overflow: hidden;
@@ -86,7 +104,7 @@ a {
 
 .openAbout {
 	margin-top: 50px;
-	transition: margin-top 2s;
+	transition: margin-top 1s;
 	z-index: -1;
 	position: relative;
   	background: #0a1f21;
@@ -99,9 +117,16 @@ a {
 	font-family: 'Josefin Sans', sans-serif;
 
 }
+.photo img {
+	border-radius: 50%;
+}
+.quote {
+	font-style: italic;
+	padding-top: 20px;
+}
 .openContacts {
 	margin-top: 100px;
-	transition: margin-top 2s;
+	transition: margin-top 1s;
 	position: relative;
   	background: #0a1f21;
   	color: white;
@@ -121,7 +146,7 @@ a {
 }
 .openMain {
 	margin-top: 50px;
-	transition: 2s;
+	transition: 1s;
 	position: relative;
   	color: white;
 	display: flex;
@@ -136,7 +161,19 @@ a {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-.builtFromScratch {
+.apps {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 50px;
+}
+/*.builtFromScratch {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -152,7 +189,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-}
+}*/
 .section {
 	width: 30%;
 	display: flex;
@@ -181,6 +218,8 @@ a {
 	align-items: flex-end;
 	color: white;
 	margin-top: 10%;
+	font-family: 'Josefin Sans', sans-serif;
+
 }
 .openNav {
 
@@ -191,6 +230,8 @@ a {
 	color: white;
 	margin-top: -100;
 	transition: margin-top 2s;
+	font-family: 'Josefin Sans', sans-serif;
+
 
 
 }
@@ -224,30 +265,96 @@ main {
 	display: none;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
+	h1 {
+		letter-spacing: 0;
+	}
+	h3 {
+		letter-spacing: 0;
+	}
 	.banner {
 		font-size: 1.2em;
 	}
 	.openBanner {
 		font-size: 1.2em;
 		transition: margin-top 2s;
-		margin-top: 30px;
+		/*margin-top: 30px;*/
+		letter-spacing: 0;
 
 	}
-	.openMain {
+	.closedBanner {
+		letter-spacing: 0;
+	}
+	
+	.smallTitle {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 5%;
+	}
+	/*.openMain {
 		transition: margin-top 2s;
 		margin-top: 30px;
+	}*/
+	.hiddenMain {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #0a1f21;
+		color: white;
+		margin-top: 50px;
+		font-size: 0.8em;
+
+
+	} 
+	.section {
+		margin: 0;
+		width: 90%;
 	}
-	.allProjects {
+	.hiddenAbout {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.8em;
+		background-color: #0a1f21;
+		color: white;
+		margin-top: 30px;
+	}
+	.photo img {
+		padding-top: 20px;
+		width: 100px;
+		height: 150px;
+		border-radius: 50%;
+	}
+	.hiddenContacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #0a1f21;
+		color: white;
+		font-size: 0.8em;
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+	}
+	.nav {
+		display: none;
+	}
+	/*.allProjects {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		font-size: 0.9em;
+	}*/
+	.apps {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-	.section {
+	/*.section {
 		width: 70%;
-	}
+	}*/
 	.image {
 		width: 200px;
 		height: 150px;
@@ -256,4 +363,83 @@ main {
 		display: flex;
 		flex-direction: column;
 	}
+	.openContacts {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.singleContact {
+		padding: 2%;
+	}
+	footer {
+		height: 200px;
+	}
+
 }
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+	h1 {
+		font-size: 1.5em;
+		letter-spacing: 3px;
+	}
+	h3 {
+		font-size: 1.2em;
+		letter-spacing: 3px;
+	}
+	.skills {
+		letter-spacing: 0;
+	}
+	.apps {
+		display: flex;
+		flex-direction: column;
+
+	}
+	.section {
+		width: 100%;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		/*display: flex;
+		flex-direction: row;*/
+	}
+	.description {
+		width: 90%;
+		
+	}
+	.description p {
+		text-align: justify;
+
+	}
+	.description h3 {
+		letter-spacing: 0;
+	}
+	.left .image {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	.left .description {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 2;
+
+	}
+	.right .image {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	.right .description {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		padding-left: 10%;
+
+	}
+} 
