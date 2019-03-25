@@ -5,17 +5,11 @@ body {
 	background-image: url('./images/back6.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	/*font-family: 'Poiret One', cursive;*/
 	font-family: 'Josefin Sans', sans-serif;
-
-	/*display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);*/
 	margin: 0;
 	position: relative;
 	z-index: 1;
 	height: 100vh;
-
 }
 html {
 	width: 100%;
@@ -31,24 +25,23 @@ a {
 	text-decoration: none;
 }
 h1 {
-	letter-spacing: 20px;
+	letter-spacing: 15px;
 	font-weight: normal;
 }
 h3 {
 	font-weight: normal;
 	letter-spacing: 5px;
 }
-.description a {
-	color: white;
-}
+
+/*Styiling of the banner*/
 .closedBanner {
 	text-align: center;
 	font-size: 2em;
 	color: white;
 	/*font-family: 'Lato', sans-serif;*/
+	/*font-family: 'Montserrat', sans-serif;*/
 	font-family: 'Josefin Sans', sans-serif;
 	/*font-family: 'Poiret One', cursive;*/
-	/*letter-spacing: 5px;*/
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -67,13 +60,13 @@ h3 {
 	font-family: 'Josefin Sans', sans-serif;
 	overflow: scroll;
 	/*font-family: 'Poiret One', cursive;*/
-	/*letter-spacing: 5px;*/
 	margin-top: -5%;
 	transition: margin-top 1s;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	scroll-behavior: smooth;
 }
 
 .openBanner h1 {
@@ -93,6 +86,7 @@ h3 {
 	padding: 0 20%;
 	letter-spacing: 5px;
 }
+/*styling of the about section*/
 .smallTitle {
 	display: none;
 }
@@ -101,7 +95,6 @@ h3 {
 	overflow: hidden;
 	display: none;
 }
-
 .openAbout {
 	margin-top: 50px;
 	transition: margin-top 1s;
@@ -115,7 +108,6 @@ h3 {
 	align-items: center;
 	padding: 5%;
 	font-family: 'Josefin Sans', sans-serif;
-
 }
 .photo img {
 	border-radius: 50%;
@@ -123,6 +115,19 @@ h3 {
 .quote {
 	font-style: italic;
 	padding-top: 20px;
+}
+/*styiling of the contacts section*/
+footer {
+	/*display: none;*/
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.hiddenContacts {
+	margin-top: -2px;
+	display: none;
 }
 .openContacts {
 	margin-top: 100px;
@@ -135,11 +140,10 @@ h3 {
   	justify-content: space-around;
 	font-family: 'Josefin Sans', sans-serif;
 }
-
 .content {
 	padding: 5%;
 }
-
+/*styiling of the projects section*/
 .hiddenMain {
 	display: none;
 	margin-top: -2px;
@@ -166,6 +170,11 @@ h3 {
 	flex-direction: row;
 	justify-content: space-around;
 }
+.beginnings .section {
+	width: 30%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
 .links {
 	display: flex;
 	flex-direction: column;
@@ -173,23 +182,6 @@ h3 {
 	justify-content: space-around;
 	height: 50px;
 }
-/*.builtFromScratch {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-
-}
-.implemented {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-
-}
-.beginnings {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}*/
 .section {
 	width: 30%;
 	display: flex;
@@ -205,49 +197,25 @@ h3 {
 	padding-bottom: 10%;
 	font-family: 'Josefin Sans', sans-serif;
 }
+.description h3 {
+	letter-spacing: 0;
+}
+.description p {
+	text-align: justify;
+
+}
+.description a {
+	color: white;
+}
+.description a:hover {
+	transform: scale(1.1);
+}
 .section img {
 	width: 80%;
 	height: 70%;
 	padding-top: 10%;
 }
 
-.closedNav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: flex-end;
-	color: white;
-	margin-top: 10%;
-	font-family: 'Josefin Sans', sans-serif;
-
-}
-.openNav {
-
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	color: white;
-	margin-top: -100;
-	transition: margin-top 2s;
-	font-family: 'Josefin Sans', sans-serif;
-
-
-
-}
-.hiddenContacts {
-	margin-top: -2px;
-	display: none;
-}
-
-footer {
-	/*display: none;*/
-	height: 300px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-}
 .image {
 	width: 400px;
 	height: 300px;
@@ -261,9 +229,27 @@ footer {
 	transform: scale(1.1);
 	cursor: pointer;
 }
-main {
-	display: none;
+/*styiling of the navigation*/
+.closedNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
+	color: white;
+	margin-top: 10%;
+	font-family: 'Josefin Sans', sans-serif;
 }
+.openNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	margin-top: -100;
+	transition: margin-top 2s;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
 
 @media screen and (max-width: 600px) {
 	h1 {
@@ -309,6 +295,9 @@ main {
 	} 
 	.section {
 		margin: 0;
+		width: 90%;
+	}
+	.beginnings .section {
 		width: 90%;
 	}
 	.hiddenAbout {
@@ -404,6 +393,7 @@ main {
 		/*display: flex;
 		flex-direction: row;*/
 	}
+
 	.description {
 		width: 90%;
 		

@@ -6,51 +6,60 @@ var footer = document.querySelector('footer');
 var openProjects = document.querySelector('.main');
 var about = document.querySelector('.about');
 var projects = document.querySelector('.projects');
+var descriptions = document.getElementsByClassName('description');
+var myStory = document.getElementsByClassName('content');
 
 function hasClass(elem, className) {
 	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-}
+};
 function openBanner() {
 	banner.classList.add('openBanner');
 	banner.classList.remove('closedBanner');
-}
+};
 function closeBanner() {
 	banner.classList.remove('openBanner');
 	banner.classList.add('closedBanner');
-}
+};
 function openContacts() {
 	footer.classList.add('openContacts');
 	footer.classList.remove('hiddenContacts');
-}
+};
 function closeContacts() {
 	footer.classList.remove('openContacts');
 	footer.classList.add('hiddenContacts');
-}
-
+};
 function openAllProjects() {
 	openProjects.classList.add('openMain');
 	openProjects.classList.remove('hiddenMain');
-}
+	for (var description of descriptions) {
+		description.tabIndex = 0;
+	}
+};
 function closeProjects() {
 	openProjects.classList.remove('openMain');
 	openProjects.classList.add('hiddenMain');
-}
+	for (var description of descriptions) {
+		description.tabIndex = -1;
+	}
+};
 function openAbout() {
 	aboutSection.classList.add('openAbout');
 	aboutSection.classList.remove('hiddenAbout');
-}
+	console.log(myStory);
+	myStory.tabIndex = 0;
+};
 function closeAbout() {
 	aboutSection.classList.remove('openAbout');
 	aboutSection.classList.add('hiddenAbout');
-}
+};
 function openNav() {
 	nav.classList.add('openNav');
 	nav.classList.remove('closedNav');
-}
+};
 function closeNav() {
 	nav.classList.add('closedNav');
 	nav.classList.remove('openNav');
-}
+};
 contacts.addEventListener('click', (function(event) {
 	if(hasClass(banner, 'closedBanner')) {
 		openContacts();
@@ -104,7 +113,7 @@ projects.addEventListener('click', (function(event) {
 		openAllProjects();
 		closeContacts();
 	}
-}))
+}));
 
 
 
